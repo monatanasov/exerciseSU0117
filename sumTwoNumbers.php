@@ -6,6 +6,9 @@
         $firstNumber = trim($_POST['firstNumber']);
         $secondNumber = trim($_POST['secondNumber']);
         $errors = [];
+        //search and replace every comma with dot if the users puts the wrong /comma/ separator
+        $firstNumber = str_replace(",",".","$firstNumber");
+        $secondNumber = str_replace(",",".","$secondNumber");
 
         if(! is_numeric($firstNumber) || ! is_numeric($secondNumber)) {
             $errors[] = 'Textboxes must contain only integer or float numbers';
