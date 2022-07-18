@@ -1,20 +1,27 @@
 <?php
+    //setting the variable to zero to stop warning inside result textbox
     $result = 0;
     if($_POST) {
+        //trim global POST variables and check if they are numerics
         $firstNumber = trim($_POST['firstNumber']);
         $secondNumber = trim($_POST['secondNumber']);
         $errors = [];
+
         if(! is_numeric($firstNumber) || ! is_numeric($secondNumber)) {
             $errors[] = 'Textboxes must contain only integer or float numbers';
         }
     } else {
+        //when page is loaded for a first time there's no $_POST and this message should be displayed
         $errors[] = 'Please fill first and second values';
     }
+
     if (empty($errors)) {
+        //sum our numbers
         $result = $firstNumber + $secondNumber;
     } else {
+        //display all errors if $errors array isn't empty
         foreach ($errors as $error) {
-            echo '<b><h2>'.$error.'</b></h2>';
+            echo '<b><h2>' . $error . '</b></h2>';
         }
     }
 ?>
@@ -31,6 +38,7 @@
             <input type="text" id="secondNumber" name="secondNumber"><br>
             <input type="submit"><br>
             <label for="result">result:</label>
+            <!-- print the summed result inside result textbox. The number is rounded to second decimal digit-->
             <input type="text" id="result" value="<?php echo round($result,2) ?>" readonly><br>
         </form>
     </body>
