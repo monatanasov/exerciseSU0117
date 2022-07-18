@@ -39,7 +39,7 @@
             <input type="text" id="firstNumber" name="firstNumber"><br>
             <label for="secondNumber">your second value:</label>
             <input type="text" id="secondNumber" name="secondNumber"><br>
-            <input type="submit"><br>
+            <input type="submit" value="Sum"><br>
             <label for="result">result:</label>
             <!-- print the summed result inside result textbox. The number is rounded to second decimal digit-->
             <input type="text" id="result" value="<?php echo round($result,2) ?>" readonly><br>
