@@ -31,7 +31,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Exercise</title>
+        <title>sumTwoNumbers</title>
     </head>
     <body>
         <form action="sumTwoNumbers.php" method="POST">
