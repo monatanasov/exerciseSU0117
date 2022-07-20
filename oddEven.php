@@ -1,3 +1,24 @@
+<?php
+    if ($_POST) {
+        $inputNumber = trim($_POST['inputNumber']);
+        $inputNumber = str_replace(",",".","$inputNumber");
+        $inputNumber = floor ($inputNumber);
+        if (is_numeric($inputNumber)) {
+            if ($inputNumber % 2 == 0) {
+                echo 'your number ' . $inputNumber . ' is EVEN';
+            } else {
+                echo 'your number ' . $inputNumber . ' is ODD';
+            }
+        } else {
+            echo '<b><h2>'.'Only integers are allowed '.'</b></h2>';
+        }
+    } else {
+        echo '<b><h2>'.'You have to fill the textbox with a number first'.'</b></h2>';
+    }
+
+
+?>
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -13,10 +34,4 @@
 </html>
 
 <?php
-    $inputNumber = trim($_POST['inputNumber']);
-
-
 echo '<pre>' . print_r($_POST, true) . '</pre>';
-
-
-

@@ -1,7 +1,7 @@
 <?php
     //setting the variable to zero to stop warning inside result textbox
     $result = 0;
-    if($_POST) {
+    if ($_POST) {
         //trim global POST variables and check if they are numerics
         $firstNumber = trim($_POST['firstNumber']);
         $secondNumber = trim($_POST['secondNumber']);
@@ -10,7 +10,7 @@
         $firstNumber = str_replace(",",".","$firstNumber");
         $secondNumber = str_replace(",",".","$secondNumber");
 
-        if(! is_numeric($firstNumber) || ! is_numeric($secondNumber)) {
+        if (! is_numeric($firstNumber) || ! is_numeric($secondNumber)) {
             $errors[] = 'Textboxes must contain only integer or float numbers';
         }
     } else {
