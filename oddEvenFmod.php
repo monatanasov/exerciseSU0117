@@ -1,11 +1,12 @@
 <?php
     if ($_POST) {
         $inputNumber = trim($_POST['inputNumber']);
+        //remainder
         $rem = fmod($inputNumber,2);
         if ($rem == 0) {
-            echo "even ";
+            echo "even";
         } else if ($rem == round($rem)) {
-            echo "odd ";
+            echo "odd";
         } else {
             echo "invalid";
         }
