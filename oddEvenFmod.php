@@ -5,7 +5,8 @@
         $rem = fmod($inputNumber,2);
         if ($rem == 0) {
             echo "even";
-        } else if ($rem == round($rem)) {
+        } //else if ($rem == round($rem)) {
+            else if ($rem == 1) {
             echo "odd";
         } else {
             echo "invalid";
