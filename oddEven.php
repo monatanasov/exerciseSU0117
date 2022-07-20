@@ -1,9 +1,13 @@
 <?php
     if ($_POST) {
+        //Strip whitespaces
         $inputNumber = trim($_POST['inputNumber']);
+        //replace commas with dots if wrong separator is used
         $inputNumber = str_replace(",",".","$inputNumber");
 
+        //check if variable is a number or numeric string and for positiveness
         if (is_numeric($inputNumber) && $inputNumber >= 0) {
+            //if the var is positive use FLOOR to round fractions down
             $inputNumber = floor ($inputNumber);
 
             if ($inputNumber % 2 == 0) {
@@ -11,7 +15,9 @@
             } else {
                 echo 'your number ' . $inputNumber . ' is ODD';
             }
+            //check if variable is a number ... and for negativeness
         } else if (is_numeric($inputNumber) && $inputNumber <= 0) {
+            //if the var is negative use CEIL to round fractions UP
             $inputNumber = ceil ($inputNumber);
 
             if ($inputNumber % 2 == 0) {
