@@ -1,5 +1,6 @@
 <?php
     // TASK: Check if a number is Odd or Even
+
     if ($_POST) {
         // Strip whitespaces
         $inputNumber = trim($_POST['inputNumber']);

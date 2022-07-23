@@ -1,5 +1,6 @@
 <?php
     // TASK: Check if a number is Odd or Even or Invalid using FMOD
+
     if ($_POST) {
         $inputNumber = trim($_POST['inputNumber']);
         // Remainder

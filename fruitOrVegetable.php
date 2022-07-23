@@ -1,7 +1,8 @@
 <?php
-// TASK: Print "fruit", "vegetable" or "unknown" depending on the input string
-    if($_POST) {
+    // TASK: Print "fruit", "vegetable" or "unknown" depending on the input string
 
+    if($_POST) {
+        $inputString = trim($_POST['inputString']);
     } else {
         echo '<b><h2>'.'Please fill your string to determine is it Fruit, Vegetable or Unknown'.'</b></h2>';
     }

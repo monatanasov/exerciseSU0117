@@ -1,5 +1,6 @@
 <?php
     // TASK: Sum two numbers
+
     // Setting the variable to zero to stop warning inside result textbox
     $result = 0;
     if ($_POST) {
