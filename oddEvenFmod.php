@@ -14,7 +14,7 @@
             echo "invalid";
         }
     } else {
-        echo '<b><h2>'.'You have to fill the textbox with a number first'.'</b></h2>';
+        echo '<b><h2>' . 'You have to fill the textbox with a number first' . '</b></h2>';
     }
 ?>
 

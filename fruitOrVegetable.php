@@ -1,10 +1,10 @@
 <?php
     // TASK: Print "fruit", "vegetable" or "unknown" depending on the input string
 
-    if($_POST) {
+    if ($_POST) {
         $inputString = trim($_POST['inputString']);
 
-        switch($inputString) {
+        switch ($inputString) {
             case 'banana';
             case 'apple';
             case 'kiwi';
@@ -26,7 +26,7 @@
                 echo 'UNKNOWN';
         }
     } else {
-        echo '<b><h2>'.'Please fill your string to determine is it Fruit, Vegetable or Unknown'.'</b></h2>';
+        echo '<b><h2>' . 'Please fill your string to determine is it Fruit, Vegetable or Unknown' . '</b></h2>';
     }
 ?>
 
