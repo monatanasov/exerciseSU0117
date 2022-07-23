@@ -1,11 +1,12 @@
 <?php
+    // Check if a number is Odd or Even or Invalid using FMOD
     if ($_POST) {
         $inputNumber = trim($_POST['inputNumber']);
-        //remainder
+        // Remainder
         $rem = fmod($inputNumber,2);
         if ($rem == 0) {
             echo "even";
-        } //else if ($rem == round($rem)) {
+        } // else if ($rem == round($rem)) {
             else if ($rem == 1) {
             echo "odd";
         } else {
