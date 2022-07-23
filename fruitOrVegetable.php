@@ -3,17 +3,37 @@
 
     if($_POST) {
         $inputString = trim($_POST['inputString']);
+
+        switch($inputString) {
+            case 'banana';
+            case 'apple';
+            case 'kiwi';
+            case 'cherry';
+            case 'lemon';
+            case 'grapes';
+            case 'peach';
+                echo 'FRUIT!';
+                break;
+            case 'tomato';
+            case 'cucumber';
+            case 'pepper';
+            case 'onion';
+            case 'garlic';
+            case 'parsley';
+                echo 'VEGETABLE';
+                break;
+            default:
+                echo 'UNKNOWN';
+        }
     } else {
         echo '<b><h2>'.'Please fill your string to determine is it Fruit, Vegetable or Unknown'.'</b></h2>';
     }
-
-
 ?>
 
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>oddEvenFmod</title>
+        <title>fruitOrVegetable</title>
     </head>
 <body>
     <form action="fruitOrVegetable.php" method="post">
