@@ -1,5 +1,5 @@
 <?php
-// Print "fruit", "vegetable" or "unknown" depending on the input string
+// TASK: Print "fruit", "vegetable" or "unknown" depending on the input string
     if($_POST) {
 
     } else {

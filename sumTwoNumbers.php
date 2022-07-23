@@ -1,12 +1,13 @@
 <?php
-    //setting the variable to zero to stop warning inside result textbox
+    // TASK: Sum two numbers
+    // Setting the variable to zero to stop warning inside result textbox
     $result = 0;
     if ($_POST) {
-        //trim global POST variables and check if they are numerics
+        // Trim global POST variables and check if they are numerics
         $firstNumber = trim($_POST['firstNumber']);
         $secondNumber = trim($_POST['secondNumber']);
         $errors = [];
-        //search and replace every comma with dot if the users puts the wrong /comma/ separator
+        // Search and replace every comma with dot if the users puts the wrong /comma/ separator
         $firstNumber = str_replace(",",".","$firstNumber");
         $secondNumber = str_replace(",",".","$secondNumber");
 
@@ -14,15 +15,15 @@
             $errors[] = 'Textboxes must contain only integer or float numbers';
         }
     } else {
-        //when page is loaded for a first time there's no $_POST and this message should be displayed
+        // When page is loaded for a first time there's no $_POST and this message should be displayed
         $errors[] = 'Please fill first and second values';
     }
 
     if (empty($errors)) {
-        //sum our numbers
+        // Sum our numbers
         $result = $firstNumber + $secondNumber;
     } else {
-        //display all errors if $errors array isn't empty
+        // Display all errors if $errors array isn't empty
         foreach ($errors as $error) {
             echo '<b><h2>' . $error . '</b></h2>';
         }
